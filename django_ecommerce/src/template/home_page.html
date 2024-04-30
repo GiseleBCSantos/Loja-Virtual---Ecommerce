@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -9,6 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
         <title>Código Fluente Ecommerce!</title>
+        <link rel="stylesheet" href="{% static 'css/main.css'%}">
     </head>
     <body>
         <div class='text-center'>
@@ -17,6 +19,15 @@
 
 
             <div class='container'>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="{% static 'img/lorem1.jpeg' %}" alt="" style="height: 100px; width: 100px;">
+                        <p>{{ content }}</p>
+                    </div>
+                </div>
+
+
                 {% if request.user.is_authenticated %}
                 <div class='row'>
                     <div class='col'>
